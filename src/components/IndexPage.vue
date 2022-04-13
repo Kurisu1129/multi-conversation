@@ -3,24 +3,25 @@
       <el-aside width="200px">Aside</el-aside>
       <el-main>
   <el-scrollbar height="400px">
-    <p v-for="item in 20" :key="item" class="scrollbar-demo-item">{{ item }}</p>
+    <p v-for="item in 20" :key="item" class="scrollbar-demo-item"><MessageWidget></MessageWidget></p>
   </el-scrollbar>
       </el-main>
     </el-container>
 </template>
 
 <script>
-import avator1 from "../assets/avator1.png"
-import avator2 from "../assets/avator2.png"
+import MessageWidget from "./messageWidget.vue"
 export default {
+  components: {
+    MessageWidget
+  },
   name: 'IndexPage',
   props: {
     msg: String
   },
   data() {
     return {
-      sender: avator1,
-      receiver: avator2
+    
     }
   }
 }
